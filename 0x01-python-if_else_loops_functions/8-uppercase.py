@@ -6,4 +6,4 @@ def uppercase(str):
 			other += f"{chr(ord('A') + (ord(i) - ord('a')))}"
 		else:
 			other += f"{i}"
-	print(f"{other}")
+	print("{:s}".format(other))
