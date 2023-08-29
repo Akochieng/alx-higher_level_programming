@@ -32,9 +32,32 @@ class Square:
             self.__size = newsize
 
     def area(self):
+        '''The area method calculates the area of the square
+        the parameter __size.
+
+        Args:
+            no arguments.
+
+        Returns:
+            The area of the square
+
+        Raises:
+            No exception. Expected to be always successful
+        '''
         return self.__size * self.__size
 
     def my_print(self):
+        '''Draws a square using #
+
+        Args:
+            no arguments.
+
+        Returns:
+            Nothing
+
+        Raises:
+            No exception. Expected to be always successful
+        '''
         times = 0
         if self.__size == 0:
             print("")
