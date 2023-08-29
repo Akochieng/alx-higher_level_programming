@@ -6,4 +6,7 @@ class Square:
     a class
     '''
     def __init__(self):
+        '''This is the init function for the square class
+            Currently, it takes not parameters
+            '''
         pass

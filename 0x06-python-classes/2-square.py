@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 class Square:
+    '''Class square describes a square with size size'''
     def __init__(self, size=0):
         '''The class square implements a typical square
 
@@ -12,6 +13,20 @@ class Square:
         self.set_size(size)
 
     def set_size(self, size):
+        '''The set_size method defines the __size private attribute.
+        It basically takes in size as a parameter and assigns it to
+        the parameter __size.
+
+        Args:
+            size (int):The size parameter
+
+        Returns:
+            Nothing at all. Just sets the __size attribute
+
+        Raises:
+            TypeError: If parameter is not an interger
+            ValueError: If parameter is not greater than 0
+        '''
         if not isinstance(size, int):
             raise TypeError("size must be an interger")
         elif size < 0:
