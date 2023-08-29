@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 class Square:
+    '''Class square describes a typical square'''
     def __init__(self, size=0):
         '''The class square implements a typical square
 
