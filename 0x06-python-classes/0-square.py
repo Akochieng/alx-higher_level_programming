@@ -5,6 +5,8 @@ This module demonstrates how to work with classes.
 The functionality included in this module is only for
 demonstration purposes.
 '''
+
+
 class Square:
     '''Class Square
 

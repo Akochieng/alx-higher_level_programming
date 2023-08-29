@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+'''Square Module
+This module demonstrates how to work with classes.
+
+The functionality included in this module is only for
+demonstration purposes.
+'''
+
+
 class Square:
     '''Class square describes a square with size size'''
     def __init__(self, size=0):
