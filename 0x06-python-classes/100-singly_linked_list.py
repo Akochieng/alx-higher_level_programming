@@ -89,8 +89,10 @@ class SinglyLinkedList:
         arr = ""
         temp = self.__head
         while temp is not None:
-            arr += f"{temp.data}\n"
+            arr += f"{temp.data}"
             temp = temp.next_node
+            if temp is not None:
+                arr += "\n"
         return arr
 
     def sorted_insert(self, value):
