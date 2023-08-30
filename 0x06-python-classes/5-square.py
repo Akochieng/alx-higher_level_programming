@@ -8,6 +8,11 @@ demonstration purposes.
 
 
 class Square:
+    '''class Square
+    This is a simple class to demonstrate how to work with properties
+    setters, and getters. It also demonstrates how to work with private
+    and public attributes
+    '''
     def __init__(self, size=0):
         '''The class square implements a typical square
 
@@ -21,6 +26,20 @@ class Square:
 
     @property
     def size(self):
+        '''The getter functions returns the value of the size attribute
+
+        The setter method has the following characteristics
+
+        Args:
+            newsize: the size of the square
+
+        Returns:
+            does not return anythong
+
+        Raises:
+            TypeError: if size is not of type interger
+            ValueError: If size is not >= 0
+        '''
         return self.__size
     @size.setter
     def size(self, newsize):
