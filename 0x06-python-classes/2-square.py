@@ -36,7 +36,7 @@ class Square:
             ValueError: If parameter is not greater than 0
         '''
         if not isinstance(size, int):
-            raise TypeError("size must be an interger")
+            raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
