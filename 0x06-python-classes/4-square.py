@@ -8,12 +8,13 @@ demonstration purposes.
 
 
 class Square:
-    def __init__(self, size=0):
         '''The class square implements a typical square
 
-        The following parameters are initialised when the class
-        is first initialised.
-
+        it does not have any class attributes. All instance
+        attributes are defined in the init function below.
+            '''
+    def __init__(self, size=0):
+        '''
         Args:
             size (float): the length or width of the square
             '''
@@ -41,7 +42,7 @@ class Square:
             ValueError: If parameter is not greater than 0
         '''
         if not isinstance(newsize, int):
-            raise TypeError("size must be an interger")
+            raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
