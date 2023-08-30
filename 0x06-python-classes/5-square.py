@@ -41,6 +41,7 @@ class Square:
             ValueError: If size is not >= 0
         '''
         return self.__size
+
     @size.setter
     def size(self, newsize):
         if not isinstance(newsize, int):

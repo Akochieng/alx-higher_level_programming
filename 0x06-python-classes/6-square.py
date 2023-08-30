@@ -44,6 +44,7 @@ class Square:
             ValueError: If the value is less than 0
         '''
         return self.__size
+
     @size.setter
     def size(self, newsize):
         if not isinstance(newsize, int):
@@ -52,6 +53,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = newsize
+
     @property
     def position(self):
         '''
@@ -70,12 +72,14 @@ class Square:
             TypeError: the value must be a tuple of 2 intergers
         '''
         return self.__position
+
     @position.setter
     def position(self, value):
         if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         elif not (isinstance(value[0], int) and isinstance(value[1], int)):
             raise TypeError("position must be a tuple of 2 positive integers")
+
     def area(self):
         '''The area method calculates the area of the square
         the parameter __size.
@@ -108,7 +112,7 @@ class Square:
             print("")
         else:
             c = " " * self.__position[0] + "#" * self.__size
-            print("{}".format("\n" * self.__position[1]),end='')
+            print("{}".format("\n" * self.__position[1]), end='')
             while times < self.__size:
                 print(f"{c}")
                 times += 1
