@@ -84,9 +84,10 @@ class Square:
             True or False
         '''
         if isinstance(other, Square):
-            if self.__size == other.__size
+            if self.__size == other.__size:
                 return True
         return False
+
     def __ne__(self, other):
         '''
         Tests whether self is not equal to the other
@@ -97,6 +98,7 @@ class Square:
             True or False
         '''
         return (not self.__eq__(other))
+
     def __lt__(self, other):
         '''
         Tests whether self is less than the other
@@ -107,6 +109,7 @@ class Square:
             True or False
         '''
         return self.__size < other.size
+
     def __gt__(self, other):
         '''
         Tests whether self is greater than the other
@@ -117,3 +120,25 @@ class Square:
             True or False
         '''
         return self.__size > other.size
+
+    def __le__(self, other):
+        '''
+        Tests whether self is less than or equal to the other
+
+        Args:
+            other: the other object
+        Return:
+            True or False
+        '''
+        return self.__size <= other.size
+
+    def __ge__(self, other):
+        '''
+        Tests whether self is greater than or equal to the other
+
+        Args:
+            other: the other object
+        Return:
+            True or False
+        '''
+        return self.__size >= other.size
