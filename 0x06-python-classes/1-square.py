@@ -20,4 +20,4 @@ class Square:
         '''This is the init function for the square class
             Currently, it takes not parameters
             '''
-        self._size = size
+        self.__size = size
