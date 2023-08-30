@@ -10,22 +10,20 @@ class Square:
     This is a simple class with two major attributes: size and position
     '''
 
-    def __init__(self, size=0, position=(0, 0)):
+    def __init__(self, size=0):
         '''
         This init function has two major attributes size and position.
 
         Args:
-            size (int): must always be >= 0
-            position (tuple): must be a tuple of intergers
+            size (float): must always be >= 0
         '''
         self.__size = size
-        self.__position = position
 
     @property
     def size(self):
         '''
         Args:
-            new_size (int): must be an int greater than or equal to 0
+            new_size (float): must be an int greater than or equal to 0
 
         Return:
             The new size
@@ -38,34 +36,12 @@ class Square:
 
     @size.setter
     def size(self, new_size):
-        if not isinstance(new_size, int):
-            raise TypeError("size must be an integer")
+        if not isinstance(new_size, float):
+            raise TypeError("size must be a number")
         elif new_size < 0:
             raise ValueError("message size must be >= 0")
         else:
             self.__size = new_size
-
-    @property
-    def position(self):
-        '''
-        Args:
-            value (tuple): must be a tuple of integers
-
-        Return: The new value of __position
-
-        Raises:
-            TypeError: if the value is not a tuple of integers
-        '''
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        if not (isinstance(value, tuple) and len(value) == 2):
-            raise TypeError("position must be a tuple of 2 positive integer")
-        elif not (isinstance(value[0], int) and isinstance(value[1], int)):
-            raise TypeError("position must be a tuple of 2 positive integer")
-        else:
-            self.__position = value
 
     def area(self):
         '''
@@ -82,16 +58,13 @@ class Square:
         Return: The string representation of square adjusted for position
         '''
         sq_str = ""
-        height_offset = self.__position[1] * "\n"
-        width_offset = self.__position[0] * " "
-        sq_str += height_offset
         if self.__size > 0:
             for i in range(1, self.__size + 1):
-                sq_str += width_offset + ("#" * self.__size)
+                sq_str += "#" * self.__size
                 if i < self.__size:
                     sq_str += "\n"
         else:
-            sq_str += ""
+            sq_str += "\n"
         return sq_str
 
     def my_print(self):
@@ -100,3 +73,47 @@ class Square:
         it relies on the str method above
         '''
         print(self.__str__())
+
+    def __eq__(self, other):
+        '''
+        Tests whether self is equal to the other
+
+        Args:
+            other: the other object of type square
+        Return:
+            True or False
+        '''
+        if isinstance(other, Square):
+            if self.__size == other.__size
+                return True
+        return False
+    def __ne__(self, other):
+        '''
+        Tests whether self is not equal to the other
+
+        Args:
+            other: the other object
+        Return:
+            True or False
+        '''
+        return (not self.__eq__(other))
+    def __lt__(self, other):
+        '''
+        Tests whether self is less than the other
+
+        Args:
+            other: the other object
+        Return:
+            True or False
+        '''
+        return self.__size < other.size
+    def __gt__(self, other):
+        '''
+        Tests whether self is greater than the other
+
+        Args:
+            other: the other object
+        Return:
+            True or False
+        '''
+        return self.__size > other.size
