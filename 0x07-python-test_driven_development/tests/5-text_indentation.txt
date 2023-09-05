@@ -1,0 +1,23 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation(34)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text = "This is a test. Will you cry, or make a fuss? Check the output below: Are you happy now?"
+>>> text_indentation(text)
+This is a test.
+<BLANKLINE>
+ Will you cry,
+<BLANKLINE>
+ or make a fuss?
+<BLANKLINE>
+ Check the output below:
+<BLANKLINE>
+ Are you happy now?
+<BLANKLINE>
+>>> text_indentation(["Mr", "Lover", "Man"])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
