@@ -79,9 +79,10 @@ class Rectangle:
         '''
         temp = ""
         num = 0
-        while num < self.__height:
-            temp += ("#" * self.__width)
-            if num < (self.__height - 1):
-                temp += "\n"
-            num += 1
+        if self.area() > 0:
+            while num < self.__height:
+                temp += ("#" * self.__width)
+                if num < (self.__height - 1):
+                    temp += "\n"
+                num += 1
         return temp
