@@ -84,7 +84,7 @@ class Rectangle:
         temp = ""
         num = 0
         while num < self.__height:
-            temp += (print_symbol * self.__width)
+            temp += (self.print_symbol * self.__width)
             if num < (self.__height - 1):
                 temp += "\n"
             num += 1
