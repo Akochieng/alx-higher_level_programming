@@ -1,4 +1,4 @@
->>> Rectangle = __import__('1-rectangle').Rectangle
+>>> Rectangle = __import__('7-rectangle').Rectangle
 
 
 >>> my_rectangle = Rectangle(2, 4)
@@ -8,12 +8,12 @@
 >>> myrectangle = Rectangle(-2, -3)
 Traceback (most recent call last):
 ...
-ValueError: width must be a positive value
+ValueError: width must be >= 0
 
 >>> myrectangle = Rectangle(None, 3)
 Traceback (most recent call last):
 ...
 TypeError: width must be an integer
 
->>> print(myrectangle.__dict__)
-{'_Rectangle__width': None, '_Rectangle__height': 3}
+>>> my_rectangle.print_symbol = ["C", "is", "fun!"]
+>>> print(my_rectangle)
