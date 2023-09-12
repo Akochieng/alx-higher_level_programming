@@ -1,0 +1,4 @@
+>>> append_write = __import__('2-append_write').append_write
+>>> string = "This School is so cool!\n"
+>>> append_write("appendfile", string)
+24

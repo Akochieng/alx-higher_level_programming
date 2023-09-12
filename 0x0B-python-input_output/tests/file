@@ -1,0 +1,5 @@
+This is a simple paragraph
+The objective of the paragraph is to test how Python handles files.
+I want to know whether it recognises the new line character, and
+how it handles a space before the new line character.
+As a matter of fact, I may as well write a very long sentence and try to establish how Python will present it to me.

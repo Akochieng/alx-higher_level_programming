@@ -1,0 +1,4 @@
+>>> write_file = __import__('1-write_file').write_file
+>>> string = "This School is so cool!\n"
+>>> write_file("writefile", string)
+24
