@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''this class is part of the models module'''
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):

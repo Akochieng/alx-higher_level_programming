@@ -4,21 +4,24 @@ from models.rectangle import Rectangle
 import unittest
 
 class Test_Rectangle(unittest.TestCase):
-    def setup(self):
+    def setUp(self):
         '''Set up a sample Rectangle object for the
         test cases
         '''
         self.r = Rectangle(2, 3)
 
+    def tearDown(self):
+        '''Cleaning up the test environment for the Rectangle class'''
+        del self.r
+
     def test_init(self):
         '''Test the accuracy of the attributes assigned
         by init function of the Rectangle class
         '''
-        self.assert(self.r.width, 2)
-        self.assert(self.r.height, 3)
-        self.assert(self.r.id, 1)
-        self.assert(self.r.x, 0)
-        self.assert(self.r.y, 0)
+        self.assertEqual(self.r.width, 2)
+        self.assertEqual(self.r.height, 3)
+        self.assertEqual(self.r.x, 0)
+        self.assertEqual(self.r.y, 0)
 
     def test_width(self):
         '''Test the width getter and setter methods
@@ -26,13 +29,13 @@ class Test_Rectangle(unittest.TestCase):
         than 0 can be assigned
         '''
         with self.assertRaises(TypeError):
-            self.r.width('r')
+            self.r.width = 'r'
         with self.assertRaises(TypeError):
             r1 = Rectangle(None, 5)
         with self.assertRaises(ValueError):
-            self.r.width(0)
+            self.r.width = 0
         with self.assertRaises(ValueError):
-            self.r.width(-4)
+            self.r.width = -4
         with self.assertRaises(ValueError):
             r1 = Rectangle(-2, 5)
 
@@ -42,13 +45,13 @@ class Test_Rectangle(unittest.TestCase):
         assigned.
         '''
         with self.assertRaises(TypeError):
-            self.r.height('h')
+            self.r.height = 'h'
         with self.assertRaises(TypeError):
             r1 = Rectangle(5, None)
         with self.assertRaises(ValueError):
-            self.r.height(0)
+            self.r.height = 0
         with self.assertRaises(ValueError):
-            self.r.height(-4)
+            self.r.height = -4
         with self.assertRaises(ValueError):
             r1 = Rectangle(2, -5)
 
@@ -57,11 +60,11 @@ class Test_Rectangle(unittest.TestCase):
         ensure only integer values >= 0 are accepted
         '''
         with self.assertRaises(TypeError):
-            self.r.x('x')
+            self.r.x = 'x'
         with self.assertRaises(TypeError):
             r1 = Rectangle(5, 3, None, 2)
-        with self.assertRaises(ValueError):
-            self.r.x(-4)
+        with self.assertRaises(TypeError):
+            self.r.x = '-4'
         with self.assertRaises(ValueError):
             r1 = Rectangle(5, 3, -1, 2)
 
@@ -70,18 +73,18 @@ class Test_Rectangle(unittest.TestCase):
         ensure only integer values >= 0 are accepted
         '''
         with self.assertRaises(TypeError):
-            self.r.y('h')
+            self.r.y = 'h'
         with self.assertRaises(TypeError):
             r1 = Rectangle(5, 3, 2, None)
         with self.assertRaises(ValueError):
-            self.r.y(-4)
+            self.r.y = -4
         with self.assertRaises(ValueError):
             r1 = Rectangle(5, 3, 1, -2)
 
     def test_area(self):
         '''Test the area method for accuracy'''
-        self.assert(self.r.area(), 5)
+        self.assertEqual(self.r.area(), 6)
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     unittest.main()
