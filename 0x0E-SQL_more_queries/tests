@@ -1,0 +1,5 @@
+INSERT INTO cities (state_id, name) VALUES (1, "San Diego");
+INSERT INTO cities (id, state_id, name) VALUES (10, 2, "Page");
+INSERT INTO cities (state_id, name) VALUES (2, "Phoenix");
+
+SELECT * FROM cities ORDER BY id ASC;
