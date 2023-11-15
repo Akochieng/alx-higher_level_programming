@@ -5,4 +5,4 @@ exports.callMeMoby = function (num, func) {
     func();
     num--;
   }
-}
+};
