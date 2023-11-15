@@ -1,4 +1,4 @@
-#!/usr/bin/nodejs
+#!/usr/bin/node
 
 function secondLargest (arr) {
   let largest = 0;
