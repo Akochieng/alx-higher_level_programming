@@ -1,27 +1,18 @@
 #!/usr/bin/node
 
-function secondLargest (arr) {
-  let largest = 0;
-  let second = 0;
-  largest = arr[0];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] >= largest) {
-      second = largest;
-      largest = arr[i];
-    } else if (arr[i] >= second) {
-      second = arr[i];
-    }
-  }
-  return second;
-}
-
 const { argv } = require('process');
-const arr = [];
-if (argv.length <= 4) {
-  console.log(0);
-} else {
+let largest = 0;
+let second = 0;
+let temp = 0;
+if (argv.length >= 4) {
   argv.slice(2).forEach(el => {
-    arr.push(Number(el));
+    temp = Number(el);
+    if (temp > largest) {
+      second = largest;
+      largest = temp;
+    } else if (temp > second) {
+      second = temp;
+    }
   });
-  console.log(secondLargest(arr));
 }
+console.log(second);
