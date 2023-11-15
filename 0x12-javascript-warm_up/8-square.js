@@ -8,7 +8,7 @@ if (isNaN(size)) {
 } else {
   for (let a = 0; a < size; a++) {
     for (let b = 0; b < size; b++) {
-      square += 'x';
+      square += 'X';
     }
     if (a < size - 1) { square += '\n'; }
   }
