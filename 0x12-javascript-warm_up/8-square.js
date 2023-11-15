@@ -1,4 +1,4 @@
-#!/usr/bin/nodejs
+#!/usr/bin/node
 
 const { argv } = require('process');
 const size = Number(argv[2]);

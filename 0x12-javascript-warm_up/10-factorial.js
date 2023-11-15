@@ -1,4 +1,4 @@
-#!/usr/bin/nodejs
+#!/usr/bin/node
 
 function factorial (x) {
   if (x === 0 || x === 1 || isNaN(x))
