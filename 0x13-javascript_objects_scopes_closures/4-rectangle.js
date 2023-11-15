@@ -11,10 +11,12 @@ class Rectangle {
   print () {
     let x = '';
     for (let i = 0; i < this.height; i++) {
-      for (let y = 0; y < this.width; y++)
+      for (let y = 0; y < this.width; y++) {
         x += 'x';
-      if (i < this.height - 1)
+      }
+      if (i < this.height - 1) {
         x += '\n';
+      }
     }
     console.log(x);
   }
@@ -28,4 +30,7 @@ class Rectangle {
   double () {
     this.width *= 2;
     this.height *= 2;
-  };
+  }
+}
+
+module.exports = Rectangle;

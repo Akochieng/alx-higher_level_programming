@@ -17,3 +17,5 @@ class Rectangle {
     console.log(x);
   }
 }
+
+module.exports = Rectangle;
