@@ -23,13 +23,13 @@ def filter():
             charset='utf8',
             connect_timeout=5
             )
-        sqlquery = f'''
+        sqlquery = '''
             SELECT *
             FROM states
             WHERE states.name
-            LIKE '{fstr}%'
+            LIKE '{}%'
             ORDER BY states.id
-            '''
+            '''.format(fstr)
         with db.cursor() as cur:
             cur.execute(sqlquery)
             rows = cur.fetchall()
