@@ -15,6 +15,8 @@ def displayVal():
         with requests.get(url) as response:
             header = response.headers
             print(f"{header['X-Request-Id']}")
+    except KeyError as msg:
+        sys.exit(msg)
     except exceptions as msg:
         sys.exit(msg)
 

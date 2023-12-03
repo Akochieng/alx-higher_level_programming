@@ -12,7 +12,7 @@ def fetchURL():
         print("Body response:")
         print(f"\t- type: {type(body)}")
         print(f"\t- content: {body}")
-        print(f"\t- utf8 content: {response.msg}")
+        print(f"\t- utf8 content: {body.decode('utf-8')}")
     except err as msg:
         print(msg)
 
